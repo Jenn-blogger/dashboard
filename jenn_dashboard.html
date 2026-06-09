@@ -26,7 +26,7 @@
   .stat-l { font-size: 10px; color: var(--text2); }
   .pbar-wrap { height: 2px; background: var(--border2); }
   .pbar-fill { height: 100%; background: var(--green); transition: width 0.3s; }
-  .sync-status { font-size: 10px; color: var(--text3); text-align: right; padding: 4px 1.5rem; }
+  .sync-bar { font-size: 10px; color: var(--text3); text-align: right; padding: 3px 1.5rem; }
   .content { padding: 1rem 1.5rem 3rem; max-width: 780px; }
   .sec { margin-bottom: 1.5rem; }
   .sec-label { font-size: 10px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text3); margin-bottom: 0.4rem; padding-bottom: 0.3rem; border-bottom: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center; }
@@ -67,15 +67,15 @@
   </div>
 </div>
 <div class="pbar-wrap"><div class="pbar-fill" id="pf" style="width:0%"></div></div>
-<div class="sync-status" id="sync-status">syncing...</div>
+<div class="sync-bar" id="sync-status">loading...</div>
 
 <div class="content">
 
   <div class="sec">
     <div class="sec-label" style="color:var(--red);border-bottom-color:var(--red-border);">🚨 urgent</div>
-    <div class="item" data-id="u1" data-label="SpaghettiOs WP draft — publishes Jun 11"><div class="checkbox"><div class="checkmark">✓</div></div><div class="itxt">SpaghettiOs WP draft — publishes Jun 11<div class="imeta">Needs your review today</div></div><span class="bdg b-red">today</span></div>
-    <div class="item" data-id="u2" data-label="Ranch Chicken Lettuce Wraps — needs images"><div class="checkbox"><div class="checkmark">✓</div></div><div class="itxt">Ranch Chicken Lettuce Wraps — needs images</div><span class="bdg b-red">blocking</span></div>
-    <div class="item" data-id="u3" data-label="Linkbuilder.io link insertion order #59200 for FDL"><div class="checkbox"><div class="checkmark">✓</div></div><div class="itxt">Linkbuilder.io — link insertion order #59200 for FDL<span class="new-dot"></span><div class="imeta">Review and approve/decline</div></div><span class="bdg b-red">new</span></div>
+    <div class="item" data-id="u1" data-label="SpaghettiOs WP draft"><div class="checkbox"><div class="checkmark">✓</div></div><div class="itxt">SpaghettiOs WP draft — publishes Jun 11<div class="imeta">Needs your review today</div></div><span class="bdg b-red">today</span></div>
+    <div class="item" data-id="u2" data-label="Ranch Chicken Lettuce Wraps needs images"><div class="checkbox"><div class="checkmark">✓</div></div><div class="itxt">Ranch Chicken Lettuce Wraps — needs images</div><span class="bdg b-red">blocking</span></div>
+    <div class="item" data-id="u3" data-label="Linkbuilder.io order 59200 FDL"><div class="checkbox"><div class="checkmark">✓</div></div><div class="itxt">Linkbuilder.io — link insertion order #59200 for FDL<span class="new-dot"></span><div class="imeta">Review and approve/decline</div></div><span class="bdg b-red">new</span></div>
   </div>
 
   <div class="fdl-box">
@@ -84,146 +84,91 @@
       <span class="fdl-status" id="fdl-status">loading...</span>
     </div>
     <div id="fdl-items">
-      <div class="item" data-id="fdl-picnic" data-label="FDL: The Summer Picnic Menu That Actually Travels Well"><div class="checkbox"><div class="checkmark">✓</div></div><div class="itxt">The Summer Picnic Menu That Actually Travels Well</div><span class="bdg b-blue">Mandy</span></div>
-      <div class="item" data-id="fdl-dad" data-label="FDL: The Dad Who Has Everything Doesn't Have This Father's Day Trip"><div class="checkbox"><div class="checkmark">✓</div></div><div class="itxt">The Dad Who Has Everything Doesn't Have This Father's Day Trip</div><span class="bdg b-orange">yours</span></div>
+      <div class="item" data-id="fdl-picnic" data-label="FDL: Summer Picnic Menu"><div class="checkbox"><div class="checkmark">✓</div></div><div class="itxt">The Summer Picnic Menu That Actually Travels Well</div><span class="bdg b-blue">Mandy</span></div>
+      <div class="item" data-id="fdl-dad" data-label="FDL: Fathers Day Trip"><div class="checkbox"><div class="checkmark">✓</div></div><div class="itxt">The Dad Who Has Everything Doesn't Have This Father's Day Trip</div><span class="bdg b-orange">yours</span></div>
     </div>
   </div>
 
   <div class="sec">
     <div class="sec-label">⚠️ sign & review</div>
-    <div class="item" data-id="sr1" data-label="Fairwinds — sign 2025 JAMI signing package"><div class="checkbox"><div class="checkmark">✓</div></div><div class="itxt">Fairwinds — sign 2025 JAMI signing package (portal)</div><span class="bdg b-red">sign</span></div>
-    <div class="item" data-id="sr2" data-label="Fairwinds — sign 2025 FDL signing package"><div class="checkbox"><div class="checkmark">✓</div></div><div class="itxt">Fairwinds — sign 2025 FDL signing package (portal)</div><span class="bdg b-red">sign</span></div>
-    <div class="item" data-id="sr3" data-label="Fairwinds — sign Matthew's 2025 US government docs"><div class="checkbox"><div class="checkmark">✓</div></div><div class="itxt">Fairwinds — sign Matthew's 2025 US government docs (portal)</div><span class="bdg b-red">sign</span></div>
-    <div class="item" data-id="sr4" data-label="Sutherland Mark — review Purchase for Cancellation docs (Zuzana)"><div class="checkbox"><div class="checkmark">✓</div></div><div class="itxt">Sutherland Mark — review Purchase for Cancellation docs (Zuzana)<div class="imeta">Forwarded to Mandy — need your comments back</div></div><span class="bdg b-red">review</span></div>
-    <div class="item" data-id="sr5" data-label="Google — update passwords from data breach"><div class="checkbox"><div class="checkmark">✓</div></div><div class="itxt">Google — passwords found in data breach<div class="imeta">Update compromised passwords</div></div><span class="bdg b-red">security</span></div>
-    <div class="item" data-id="sr6" data-label="Wordfence — security issues on thebitestuff.com"><div class="checkbox"><div class="checkmark">✓</div></div><div class="itxt">Wordfence — security issues on thebitestuff.com</div><span class="bdg b-orange">security</span></div>
+    <div class="item" data-id="sr1" data-label="Sign Fairwinds JAMI 2025"><div class="checkbox"><div class="checkmark">✓</div></div><div class="itxt">Fairwinds — sign 2025 JAMI signing package (portal)</div><span class="bdg b-red">sign</span></div>
+    <div class="item" data-id="sr2" data-label="Sign Fairwinds FDL 2025"><div class="checkbox"><div class="checkmark">✓</div></div><div class="itxt">Fairwinds — sign 2025 FDL signing package (portal)</div><span class="bdg b-red">sign</span></div>
+    <div class="item" data-id="sr3" data-label="Sign Fairwinds Matthew US govt docs"><div class="checkbox"><div class="checkmark">✓</div></div><div class="itxt">Fairwinds — sign Matthew's 2025 US government docs (portal)</div><span class="bdg b-red">sign</span></div>
+    <div class="item" data-id="sr4" data-label="Sutherland Mark Zuzana cancellation docs"><div class="checkbox"><div class="checkmark">✓</div></div><div class="itxt">Sutherland Mark — review Purchase for Cancellation docs (Zuzana)<div class="imeta">Forwarded to Mandy — need your comments back</div></div><span class="bdg b-red">review</span></div>
+    <div class="item" data-id="sr5" data-label="Google password breach"><div class="checkbox"><div class="checkmark">✓</div></div><div class="itxt">Google — passwords found in data breach<div class="imeta">Update compromised passwords</div></div><span class="bdg b-red">security</span></div>
+    <div class="item" data-id="sr6" data-label="Wordfence thebitestuff.com"><div class="checkbox"><div class="checkmark">✓</div></div><div class="itxt">Wordfence — security issues on thebitestuff.com</div><span class="bdg b-orange">security</span></div>
     <div class="item" data-id="sr7" data-label="Cancel mortgage homeowners insurance"><div class="checkbox"><div class="checkmark">✓</div></div><div class="itxt">Cancel mortgage homeowners insurance?</div><span class="bdg b-orange">action</span></div>
   </div>
 
   <div class="sec">
     <div class="sec-label">JAMI — jenn review WP draft</div>
-    <div class="item" data-id="wp1" data-label="WP Review: Cheeseburger Hamburger Helper"><div class="checkbox"><div class="checkmark">✓</div></div><div class="itxt">Cheeseburger Hamburger Helper<div class="imeta">Publish Jul 2</div></div><span class="bdg b-blue">Jul 2</span></div>
-    <div class="item" data-id="wp2" data-label="WP Review: Garlic Fried Rice"><div class="checkbox"><div class="checkmark">✓</div></div><div class="itxt">Garlic Fried Rice<div class="imeta">Publish Jul 16</div></div><span class="bdg b-blue">Jul 16</span></div>
-    <div class="item" data-id="wp3" data-label="WP Review: Keto Coffee Jelly"><div class="checkbox"><div class="checkmark">✓</div></div><div class="itxt">Keto Coffee Jelly</div></div>
-    <div class="item" data-id="wp4" data-label="WP Review: Caramel Apple Cheesecake Bars"><div class="checkbox"><div class="checkmark">✓</div></div><div class="itxt">Caramel Apple Cheesecake Bars</div></div>
-    <div class="item" data-id="wp5" data-label="WP Review: Brown Sugar Mustard Glaze for Ham"><div class="checkbox"><div class="checkmark">✓</div></div><div class="itxt">Brown Sugar Mustard Glaze for Ham</div></div>
-    <div class="item" data-id="wp6" data-label="WP Review: 3-Layer Chocolate Cake"><div class="checkbox"><div class="checkmark">✓</div></div><div class="itxt">3-Layer Chocolate Cake — new format style needed</div></div>
+    <div class="item" data-id="wp1" data-label="WP Cheeseburger Hamburger Helper"><div class="checkbox"><div class="checkmark">✓</div></div><div class="itxt">Cheeseburger Hamburger Helper<div class="imeta">Publish Jul 2</div></div><span class="bdg b-blue">Jul 2</span></div>
+    <div class="item" data-id="wp2" data-label="WP Garlic Fried Rice"><div class="checkbox"><div class="checkmark">✓</div></div><div class="itxt">Garlic Fried Rice<div class="imeta">Publish Jul 16</div></div><span class="bdg b-blue">Jul 16</span></div>
+    <div class="item" data-id="wp3" data-label="WP Keto Coffee Jelly"><div class="checkbox"><div class="checkmark">✓</div></div><div class="itxt">Keto Coffee Jelly</div></div>
+    <div class="item" data-id="wp4" data-label="WP Caramel Apple Cheesecake Bars"><div class="checkbox"><div class="checkmark">✓</div></div><div class="itxt">Caramel Apple Cheesecake Bars</div></div>
+    <div class="item" data-id="wp5" data-label="WP Brown Sugar Mustard Glaze for Ham"><div class="checkbox"><div class="checkmark">✓</div></div><div class="itxt">Brown Sugar Mustard Glaze for Ham</div></div>
+    <div class="item" data-id="wp6" data-label="WP 3-Layer Chocolate Cake"><div class="checkbox"><div class="checkmark">✓</div></div><div class="itxt">3-Layer Chocolate Cake — new format style needed</div></div>
   </div>
 
   <div class="sec">
     <div class="sec-label">FDL — to write (yours)</div>
-    <div class="item" data-id="fw1" data-label="FDL Write: Not gaining weight on a cruise"><div class="checkbox"><div class="checkmark">✓</div></div><div class="itxt">Placeholder: Not gaining weight on a cruise</div></div>
-    <div class="item" data-id="fw2" data-label="FDL Write: Strawberry Shortcake Day"><div class="checkbox"><div class="checkmark">✓</div></div><div class="itxt">Placeholder: Strawberry Shortcake Day</div></div>
-    <div class="item" data-id="fw3" data-label="FDL Write: Cruise Dining Becomes A Reason To Book"><div class="checkbox"><div class="checkmark">✓</div></div><div class="itxt">Cruise Title 4: Cruise Dining Becomes A Reason To Book</div><span class="bdg b-orange">PR trip</span></div>
-    <div class="item" data-id="fw4" data-label="FDL Write: Hotel Restaurants Become Destinations"><div class="checkbox"><div class="checkmark">✓</div></div><div class="itxt">Hotel Restaurants Become Destinations of Their Own</div><span class="bdg b-orange">AP</span></div>
-    <div class="item" data-id="fw5" data-label="FDL Write: The All-Inclusive That Hands You the Keys to a Villa"><div class="checkbox"><div class="checkmark">✓</div></div><div class="itxt">The All-Inclusive That Hands You the Keys to a Villa</div><span class="bdg b-orange">AP</span></div>
-    <div class="item" data-id="fw6" data-label="FDL Write: Piña colada article"><div class="checkbox"><div class="checkmark">✓</div></div><div class="itxt">Piña colada article<span class="new-dot"></span></div></div>
+    <div class="item" data-id="fw1" data-label="FDL not gaining weight on cruise"><div class="checkbox"><div class="checkmark">✓</div></div><div class="itxt">Placeholder: Not gaining weight on a cruise</div></div>
+    <div class="item" data-id="fw2" data-label="FDL Strawberry Shortcake Day"><div class="checkbox"><div class="checkmark">✓</div></div><div class="itxt">Placeholder: Strawberry Shortcake Day</div></div>
+    <div class="item" data-id="fw3" data-label="FDL Cruise Dining PR trip"><div class="checkbox"><div class="checkmark">✓</div></div><div class="itxt">Cruise Title 4: Cruise Dining Becomes A Reason To Book</div><span class="bdg b-orange">PR trip</span></div>
+    <div class="item" data-id="fw4" data-label="FDL Hotel Restaurants AP"><div class="checkbox"><div class="checkmark">✓</div></div><div class="itxt">Hotel Restaurants Become Destinations of Their Own</div><span class="bdg b-orange">AP</span></div>
+    <div class="item" data-id="fw5" data-label="FDL All-Inclusive Keys to Villa AP"><div class="checkbox"><div class="checkmark">✓</div></div><div class="itxt">The All-Inclusive That Hands You the Keys to a Villa</div><span class="bdg b-orange">AP</span></div>
+    <div class="item" data-id="fw6" data-label="FDL Pina colada article"><div class="checkbox"><div class="checkmark">✓</div></div><div class="itxt">Piña colada article<span class="new-dot"></span></div></div>
   </div>
 
   <div class="sec">
     <div class="sec-label">💸 invoices to pay</div>
-    <div class="item" data-id="i1" data-label="Pay: WR Bookkeeping May source deductions"><div class="checkbox"><div class="checkmark">✓</div></div><div class="itxt">WR Bookkeeping — May source deductions<div class="imeta">Due Jun 15</div></div><span class="bdg b-red">Jun 15</span></div>
-    <div class="item" data-id="i2" data-label="Pay: Fairwinds Invoice 1497 JAMI $2994.50"><div class="checkbox"><div class="checkmark">✓</div></div><div class="itxt">Fairwinds — Invoice 1497, JAMI, CAD $2,994.50<div class="imeta">Due Jun 28</div></div><span class="bdg b-orange">Jun 28</span></div>
-    <div class="item" data-id="i3" data-label="Pay: Fairwinds Invoice 1498 FDL $3260.05"><div class="checkbox"><div class="checkmark">✓</div></div><div class="itxt">Fairwinds — Invoice 1498, FDL, CAD $3,260.05<div class="imeta">Due Jun 28</div></div><span class="bdg b-orange">Jun 28</span></div>
-    <div class="item" data-id="i4" data-label="Pay: Fairwinds Invoice 1525 $2034"><div class="checkbox"><div class="checkmark">✓</div></div><div class="itxt">Fairwinds — Invoice 1525, CAD $2,034<div class="imeta">Due Jul 5</div></div><span class="bdg b-blue">Jul 5</span></div>
-    <div class="item" data-id="i5" data-label="Pay: Paul Rose Jr FDL first June invoice"><div class="checkbox"><div class="checkmark">✓</div></div><div class="itxt">Paul Rose Jr. (FDL) — first June invoice</div><span class="bdg b-blue">pay</span></div>
+    <div class="item" data-id="i1" data-label="Pay WR Bookkeeping May source deductions"><div class="checkbox"><div class="checkmark">✓</div></div><div class="itxt">WR Bookkeeping — May source deductions<div class="imeta">Due Jun 15</div></div><span class="bdg b-red">Jun 15</span></div>
+    <div class="item" data-id="i2" data-label="Pay Fairwinds 1497 JAMI"><div class="checkbox"><div class="checkmark">✓</div></div><div class="itxt">Fairwinds — Invoice 1497, JAMI, CAD $2,994.50<div class="imeta">Due Jun 28</div></div><span class="bdg b-orange">Jun 28</span></div>
+    <div class="item" data-id="i3" data-label="Pay Fairwinds 1498 FDL"><div class="checkbox"><div class="checkmark">✓</div></div><div class="itxt">Fairwinds — Invoice 1498, FDL, CAD $3,260.05<div class="imeta">Due Jun 28</div></div><span class="bdg b-orange">Jun 28</span></div>
+    <div class="item" data-id="i4" data-label="Pay Fairwinds 1525"><div class="checkbox"><div class="checkmark">✓</div></div><div class="itxt">Fairwinds — Invoice 1525, CAD $2,034<div class="imeta">Due Jul 5</div></div><span class="bdg b-blue">Jul 5</span></div>
+    <div class="item" data-id="i5" data-label="Pay Paul Rose Jr FDL June"><div class="checkbox"><div class="checkmark">✓</div></div><div class="itxt">Paul Rose Jr. (FDL) — first June invoice</div><span class="bdg b-blue">pay</span></div>
   </div>
 
   <div class="sec">
     <div class="sec-label">📬 reply needed</div>
-    <div class="item" data-id="r1" data-label="Email Kristian about personal training sessions"><div class="checkbox"><div class="checkmark">✓</div></div><div class="itxt">Email Kristian about personal training sessions</div><span class="bdg b-orange">email</span></div>
-    <div class="item" data-id="r2" data-label="Reply: Visit Tucson fall trip"><div class="checkbox"><div class="checkmark">✓</div></div><div class="itxt">Visit Tucson — confirm fall trip (2–3 nights)</div><span class="bdg b-orange">reply</span></div>
-    <div class="item" data-id="r3" data-label="Reply: William Green Publisher Index 7am call"><div class="checkbox"><div class="checkmark">✓</div></div><div class="itxt">William Green (Publisher Index) — confirm 7am EST call</div><span class="bdg b-orange">reply</span></div>
-    <div class="item" data-id="r4" data-label="Read: Arv FDL admin report"><div class="checkbox"><div class="checkmark">✓</div></div><div class="itxt">Arv's FDL admin report — unread since Jun 4</div><span class="bdg b-orange">read</span></div>
-    <div class="item" data-id="r5" data-label="Confirm: Lunarlinks payment Keto Cooking Wins"><div class="checkbox"><div class="checkmark">✓</div></div><div class="itxt">Lunarlinks — confirm payment received for Keto Cooking Wins</div><span class="bdg b-orange">confirm</span></div>
-    <div class="item" data-id="r6" data-label="Write: Iceland Viking Wellness article"><div class="checkbox"><div class="checkmark">✓</div></div><div class="itxt">Iceland / Viking Wellness — Grace Seymour sent quote + assets<div class="imeta">You committed to this article</div></div><span class="bdg b-orange">write</span></div>
-    <div class="item" data-id="r7" data-label="Reply: The World Residences at Sea Julia Murray"><div class="checkbox"><div class="checkmark">✓</div></div><div class="itxt">The World, Residences at Sea — Julia Murray wants a call</div><span class="bdg b-orange">reply</span></div>
-    <div class="item" data-id="r8" data-label="Review: Midwest festivals pitch Rachel McAllister"><div class="checkbox"><div class="checkmark">✓</div></div><div class="itxt">Midwest festivals pitch — Rachel McAllister</div><span class="bdg b-blue">review</span></div>
-    <div class="item" data-id="r9" data-label="Assets: Celebrity Solstice Golin image folder"><div class="checkbox"><div class="checkmark">✓</div></div><div class="itxt">Celebrity Solstice — new image folder from Golin</div><span class="bdg b-blue">assets</span></div>
-    <div class="item" data-id="r10" data-label="Assets: Charlotte Panko Peruvian Kristen Moore photos"><div class="checkbox"><div class="checkmark">✓</div></div><div class="itxt">Charlotte / Panko Peruvian — Kristen Moore sent interior photos</div><span class="bdg b-blue">assets</span></div>
+    <div class="item" data-id="r1" data-label="Email Kristian personal training"><div class="checkbox"><div class="checkmark">✓</div></div><div class="itxt">Email Kristian about personal training sessions</div><span class="bdg b-orange">email</span></div>
+    <div class="item" data-id="r2" data-label="Reply Visit Tucson fall trip"><div class="checkbox"><div class="checkmark">✓</div></div><div class="itxt">Visit Tucson — confirm fall trip (2–3 nights)</div><span class="bdg b-orange">reply</span></div>
+    <div class="item" data-id="r3" data-label="Reply William Green Publisher Index call"><div class="checkbox"><div class="checkmark">✓</div></div><div class="itxt">William Green (Publisher Index) — confirm 7am EST call</div><span class="bdg b-orange">reply</span></div>
+    <div class="item" data-id="r4" data-label="Read Arv FDL admin report"><div class="checkbox"><div class="checkmark">✓</div></div><div class="itxt">Arv's FDL admin report — unread since Jun 4</div><span class="bdg b-orange">read</span></div>
+    <div class="item" data-id="r5" data-label="Confirm Lunarlinks payment Keto Cooking Wins"><div class="checkbox"><div class="checkmark">✓</div></div><div class="itxt">Lunarlinks — confirm payment received for Keto Cooking Wins</div><span class="bdg b-orange">confirm</span></div>
+    <div class="item" data-id="r6" data-label="Write Iceland Viking Wellness article"><div class="checkbox"><div class="checkmark">✓</div></div><div class="itxt">Iceland / Viking Wellness — Grace Seymour sent quote + assets<div class="imeta">You committed to this article</div></div><span class="bdg b-orange">write</span></div>
+    <div class="item" data-id="r7" data-label="Reply World Residences at Sea Julia Murray"><div class="checkbox"><div class="checkmark">✓</div></div><div class="itxt">The World, Residences at Sea — Julia Murray wants a call</div><span class="bdg b-orange">reply</span></div>
+    <div class="item" data-id="r8" data-label="Review Midwest festivals Rachel McAllister"><div class="checkbox"><div class="checkmark">✓</div></div><div class="itxt">Midwest festivals pitch — Rachel McAllister</div><span class="bdg b-blue">review</span></div>
+    <div class="item" data-id="r9" data-label="Assets Celebrity Solstice Golin images"><div class="checkbox"><div class="checkmark">✓</div></div><div class="itxt">Celebrity Solstice — new image folder from Golin</div><span class="bdg b-blue">assets</span></div>
+    <div class="item" data-id="r10" data-label="Assets Charlotte Panko Peruvian photos"><div class="checkbox"><div class="checkmark">✓</div></div><div class="itxt">Charlotte / Panko Peruvian — Kristen Moore sent interior photos</div><span class="bdg b-blue">assets</span></div>
   </div>
 
   <div class="sec">
     <div class="sec-label">✈️ travel</div>
-    <div class="item" data-id="t1" data-label="Check: Air Canada Paris double booking"><div class="checkbox"><div class="checkmark">✓</div></div><div class="itxt">Air Canada — Toronto to Paris, Aug 23 (CR3XBP + CV63SI)<div class="imeta">Two booking refs — confirm you didn't double-book</div></div><span class="bdg b-orange">check</span></div>
+    <div class="item" data-id="t1" data-label="Check Air Canada Paris double booking"><div class="checkbox"><div class="checkmark">✓</div></div><div class="itxt">Air Canada — Toronto to Paris, Aug 23 (CR3XBP + CV63SI)<div class="imeta">Two booking refs — confirm you didn't double-book</div></div><span class="bdg b-orange">check</span></div>
   </div>
 
 </div>
 
 <script>
-// ── CONFIG ──────────────────────────────────────────────
-const SHEET_ID = '1e2MeE0opgJZhF5DY0iqUOMS0JcnN1oxaM2dK1urqHNA';
+const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwbapDrAEKf1V5k6_M2MPXxfquzxffW2hEa7FUieLJlXSDvtskpEpYTRL3E_aLz2oQ/exec';
 const FDL_TOKEN = 'pk_26158793_VWG43Q6KEN3W9O81B145JVF7GFM0N269';
 const FDL_TEAM = '9013027819';
-
-// ── STATE ───────────────────────────────────────────────
 let doneSet = new Set();
-let googleToken = null;
 
-// ── GOOGLE AUTH ─────────────────────────────────────────
-async function getGoogleToken() {
-  // Uses Google Identity Services if available, falls back to prompt
-  return new Promise((resolve) => {
-    if (window.google && window.google.accounts) {
-      const client = window.google.accounts.oauth2.initTokenClient({
-        client_id: '', // No client ID needed — user pastes token below
-        scope: 'https://www.googleapis.com/auth/spreadsheets',
-        callback: (resp) => resolve(resp.access_token),
-      });
-      client.requestAccessToken();
-    } else {
-      const token = prompt('Paste your Google OAuth token (or press Cancel to use local-only mode):');
-      resolve(token);
-    }
-  });
-}
+function setSyncStatus(msg) { document.getElementById('sync-status').textContent = msg; }
 
-// ── SHEETS API ──────────────────────────────────────────
-async function readDoneFromSheet() {
-  if (!googleToken) return;
+async function callScript(params) {
   try {
-    const url = `https://sheets.googleapis.com/v4/spreadsheets/${SHEET_ID}/values/Sheet1!A:B`;
-    const res = await fetch(url, { headers: { Authorization: `Bearer ${googleToken}` } });
-    const data = await res.json();
-    const rows = data.values || [];
-    // rows: [id, date_completed]
-    rows.forEach(([id]) => { if (id && id !== 'id') doneSet.add(id); });
-  } catch(e) { console.warn('Sheet read failed', e); }
+    const url = SCRIPT_URL + '?' + new URLSearchParams(params).toString();
+    const res = await fetch(url);
+    return await res.json();
+  } catch(e) { setSyncStatus('sync error'); return null; }
 }
 
-async function writeDoneToSheet(id, label, done) {
-  if (!googleToken) return;
-  try {
-    if (done) {
-      // Append row
-      const url = `https://sheets.googleapis.com/v4/spreadsheets/${SHEET_ID}/values/Sheet1!A:B:append?valueInputOption=RAW`;
-      await fetch(url, {
-        method: 'POST',
-        headers: { Authorization: `Bearer ${googleToken}`, 'Content-Type': 'application/json' },
-        body: JSON.stringify({ values: [[id, new Date().toISOString(), label]] })
-      });
-    } else {
-      // Find and delete row — read first
-      const readUrl = `https://sheets.googleapis.com/v4/spreadsheets/${SHEET_ID}/values/Sheet1!A:A`;
-      const readRes = await fetch(readUrl, { headers: { Authorization: `Bearer ${googleToken}` } });
-      const readData = await readRes.json();
-      const rows = readData.values || [];
-      const rowIndex = rows.findIndex(r => r[0] === id);
-      if (rowIndex >= 0) {
-        // Clear that row
-        const clearUrl = `https://sheets.googleapis.com/v4/spreadsheets/${SHEET_ID}/values/Sheet1!A${rowIndex+1}:C${rowIndex+1}:clear`;
-        await fetch(clearUrl, { method: 'POST', headers: { Authorization: `Bearer ${googleToken}` } });
-      }
-    }
-    setSyncStatus('synced ' + new Date().toLocaleTimeString('en-CA', {hour:'numeric',minute:'2-digit'}));
-  } catch(e) {
-    setSyncStatus('sync failed — working offline');
-  }
-}
-
-// ── UI ──────────────────────────────────────────────────
-function setSyncStatus(msg) {
-  document.getElementById('sync-status').textContent = msg;
+async function loadDone() {
+  const data = await callScript({ action: 'read' });
+  if (data && data.done) data.done.forEach(id => doneSet.add(id));
 }
 
 function updateStats() {
@@ -244,37 +189,30 @@ function applyDone() {
 function tog(el) {
   const id = el.dataset.id;
   const label = el.dataset.label || id;
-  if (!id) return;
   const nowDone = !doneSet.has(id);
   if (nowDone) doneSet.add(id); else doneSet.delete(id);
   el.classList.toggle('done', nowDone);
   updateStats();
   setSyncStatus('saving...');
-  writeDoneToSheet(id, label, nowDone);
+  callScript({ action: nowDone ? 'tick' : 'untick', id, label }).then(res => {
+    setSyncStatus(res ? 'synced ' + new Date().toLocaleTimeString('en-CA',{hour:'numeric',minute:'2-digit'}) : 'offline');
+  });
 }
 
-document.querySelectorAll('.item[data-id]').forEach(el => {
-  el.addEventListener('click', () => tog(el));
-});
+document.querySelectorAll('.item[data-id]').forEach(el => el.addEventListener('click', () => tog(el)));
 
-// ── DATE + CLOCK ─────────────────────────────────────────
 const days = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
 const months = ['January','February','March','April','May','June','July','August','September','October','November','December'];
-const now = new Date();
-document.getElementById('datestr').textContent = `${days[now.getDay()]} · ${months[now.getMonth()]} ${now.getDate()}, ${now.getFullYear()}`;
-function updateClock() {
-  document.getElementById('clock').textContent = new Date().toLocaleTimeString('en-CA',{hour:'numeric',minute:'2-digit'});
-}
+const n = new Date();
+document.getElementById('datestr').textContent = days[n.getDay()] + ' · ' + months[n.getMonth()] + ' ' + n.getDate() + ', ' + n.getFullYear();
+function updateClock() { document.getElementById('clock').textContent = new Date().toLocaleTimeString('en-CA',{hour:'numeric',minute:'2-digit'}); }
 updateClock(); setInterval(updateClock, 30000);
 
-// ── FDL AUTO-REFRESH ─────────────────────────────────────
 async function refreshFDL() {
   const status = document.getElementById('fdl-status');
   status.textContent = 'refreshing...';
   try {
-    const res = await fetch(`https://api.clickup.com/api/v2/team/${FDL_TEAM}/task?statuses[]=review%20gdoc&assignees[]=4424910&subtasks=true`, {
-      headers: { Authorization: FDL_TOKEN }
-    });
+    const res = await fetch('https://api.clickup.com/api/v2/team/' + FDL_TEAM + '/task?statuses[]=review%20gdoc&assignees[]=4424910&subtasks=true', { headers: { Authorization: FDL_TOKEN } });
     const data = await res.json();
     const container = document.getElementById('fdl-items');
     const existing = {};
@@ -283,14 +221,11 @@ async function refreshFDL() {
       const id = 'fdl-' + t.id;
       if (!existing[id]) {
         const div = document.createElement('div');
-        div.className = 'item';
-        div.dataset.id = id;
-        div.dataset.label = 'FDL Review: ' + t.name;
+        div.className = 'item'; div.dataset.id = id; div.dataset.label = 'FDL Review ' + t.name;
         if (doneSet.has(id)) div.classList.add('done');
-        div.innerHTML = `<div class="checkbox"><div class="checkmark">✓</div></div><div class="itxt">${t.name}<span class="new-dot"></span></div><span class="bdg b-orange">review</span>`;
+        div.innerHTML = '<div class="checkbox"><div class="checkmark">✓</div></div><div class="itxt">' + t.name + '<span class="new-dot"></span></div><span class="bdg b-orange">review</span>';
         div.addEventListener('click', () => tog(div));
-        container.appendChild(div);
-        updateStats();
+        container.appendChild(div); updateStats();
       }
     });
     status.textContent = 'refreshed ' + new Date().toLocaleTimeString('en-CA',{hour:'numeric',minute:'2-digit'});
@@ -299,43 +234,21 @@ async function refreshFDL() {
 }
 
 function scheduleNext() {
-  const n = new Date(), h = n.getHours();
+  const now = new Date(), h = now.getHours();
   const next = [8,12,16].find(t => t > h);
   if (next) {
-    const d = new Date(n); d.setHours(next,0,0,0);
+    const d = new Date(now); d.setHours(next,0,0,0);
     const label = next===12?'12pm':next<12?next+'am':(next-12)+'pm';
-    document.getElementById('fdl-status').textContent = `next refresh at ${label}`;
-    setTimeout(refreshFDL, d-n);
-  } else {
-    document.getElementById('fdl-status').textContent = 'done for today';
-  }
+    document.getElementById('fdl-status').textContent = 'next refresh at ' + label;
+    setTimeout(refreshFDL, d-now);
+  } else { document.getElementById('fdl-status').textContent = 'done for today'; }
 }
 
-// ── INIT ─────────────────────────────────────────────────
 async function init() {
-  setSyncStatus('connecting to Google Sheets...');
-  // Try to get token via OAuth
-  try {
-    const authRes = await fetch('https://oauth2.googleapis.com/token', { method: 'HEAD' });
-  } catch(e) {}
-  
-  // For now use a stored token approach — prompt once per session
-  const storedToken = sessionStorage.getItem('gtoken');
-  if (storedToken) {
-    googleToken = storedToken;
-  } else {
-    googleToken = prompt('To sync with Google Sheets, paste your Google OAuth access token.\n\nGet one from: https://developers.google.com/oauthplayground\n(Scope: spreadsheets)\n\nOr press Cancel to work offline (ticks won\'t persist):');
-    if (googleToken) sessionStorage.setItem('gtoken', googleToken);
-  }
-
-  if (googleToken) {
-    await readDoneFromSheet();
-    setSyncStatus('synced with Google Sheets');
-  } else {
-    setSyncStatus('offline mode — ticks not saved');
-  }
-
+  setSyncStatus('loading...');
+  await loadDone();
   applyDone();
+  setSyncStatus('synced');
   scheduleNext();
 }
 
