@@ -63,4 +63,193 @@
       <div class="stat"><div class="stat-n" id="dn">0</div><div class="stat-l">done</div></div>
       <div class="stat"><div class="stat-n" id="rn">0</div><div class="stat-l">left</div></div>
     </div>
-    <div class="clock"
+    <div class="clock" id="clock"></div>
+  </div>
+</div>
+<div class="pbar-wrap"><div class="pbar-fill" id="pf" style="width:0%"></div></div>
+<div class="sync-bar" id="sync-status">loading...</div>
+
+<div class="content">
+
+  <div class="sec">
+    <div class="sec-label" style="color:var(--red);border-bottom-color:rgba(255,68,68,0.25);">🚨 urgent</div>
+    <div class="item" data-id="u1" data-label="WR Bookkeeping statement pay now"><div class="checkbox"><div class="checkmark">✓</div></div><div class="itxt">WR Bookkeeping — statement arrived Jul 1, pay immediately<div class="imeta">Overdue — do this today</div></div><span class="bdg b-red">overdue</span></div>
+    <div class="item" data-id="u2" data-label="Vernise BWYL GWYL AllSpice DNS TXT records"><div class="checkbox"><div class="checkmark">✓</div></div><div class="itxt">Vernise — BWYL + GWYL AllSpice DNS TXT records need to be added<div class="imeta">She sent the values Jul 3 — add TXT records to DNS or hand off to Brandon</div></div><span class="bdg b-red">action</span></div>
+    <div class="item" data-id="u3" data-label="Pretty Links 60% off renew"><div class="checkbox"><div class="checkmark">✓</div></div><div class="itxt">Pretty Links — 60% renewal offer, link sent Jun 29<div class="imeta">You said yes — complete the purchase before it expires</div></div><span class="bdg b-red">buy</span></div>
+    <div class="item" data-id="u4" data-label="Search Console product snippets CWYL"><div class="checkbox"><div class="checkmark">✓</div></div><div class="itxt">Search Console — product snippets + merchant listings issues on CWYL<div class="imeta">2 + 3 errors flagged Jun 11 — still unresolved</div></div><span class="bdg b-red">fix</span></div>
+    <div class="item" data-id="u5" data-label="lovable password noted to self"><div class="checkbox"><div class="checkmark">✓</div></div><div class="itxt">Lovable — you emailed yourself credentials Jul 2<div class="imeta">Store this somewhere safe, not in email</div></div><span class="bdg b-red">secure</span></div>
+  </div>
+
+  <div class="fdl-box">
+    <div class="sec-label">
+      <span>🔴 FDL — review gdoc</span>
+      <span class="fdl-status" id="fdl-status">loading...</span>
+    </div>
+    <div id="fdl-items"><div class="loading">Loading...</div></div>
+  </div>
+
+  <div class="sec">
+    <div class="sec-label">JAMI — jenn review WP draft <span id="jami-status" style="font-size:10px;font-weight:400;text-transform:none;letter-spacing:0;color:var(--text3);"></span></div>
+    <div id="jami-items"><div class="loading">Loading...</div></div>
+  </div>
+
+  <div class="sec">
+    <div class="sec-label">💸 invoices & receipts</div>
+    <div class="item" data-id="i1" data-label="Paul Rose Jr early July invoice FDL"><div class="checkbox"><div class="checkmark">✓</div></div><div class="itxt">Paul Rose Jr. — early July invoice (FDL)<div class="imeta">Arrived Jul 4</div></div><span class="bdg b-orange">pay</span></div>
+    <div class="item" data-id="i2" data-label="Yvonne FDL invoice July"><div class="checkbox"><div class="checkmark">✓</div></div><div class="itxt">Yvonne — invoice arrived Jul 3 (FDL)</div><span class="bdg b-orange">pay</span></div>
+    <div class="item" data-id="i3" data-label="Plausible Analytics 49 July"><div class="checkbox"><div class="checkmark">✓</div></div><div class="itxt">Plausible Analytics — $49 charged Jul 4<div class="imeta">File/expense it</div></div><span class="bdg b-blue">file</span></div>
+    <div class="item" data-id="i4" data-label="Fairwinds 1497 JAMI Jun 28"><div class="checkbox"><div class="checkmark">✓</div></div><div class="itxt">Fairwinds — Invoice 1497, JAMI, CAD $2,994.50<div class="imeta">Was due Jun 28 — pay if not done</div></div><span class="bdg b-red">overdue?</span></div>
+    <div class="item" data-id="i5" data-label="Fairwinds 1498 FDL Jun 28"><div class="checkbox"><div class="checkmark">✓</div></div><div class="itxt">Fairwinds — Invoice 1498, FDL, CAD $3,260.05<div class="imeta">Was due Jun 28 — pay if not done</div></div><span class="bdg b-red">overdue?</span></div>
+    <div class="item" data-id="i6" data-label="Fairwinds 1525 Jul 5"><div class="checkbox"><div class="checkmark">✓</div></div><div class="itxt">Fairwinds — Invoice 1525, CAD $2,034<div class="imeta">Due Jul 5 — TODAY</div></div><span class="bdg b-red">today</span></div>
+    <div class="item" data-id="i7" data-label="Celebrity Cruises final invoice file"><div class="checkbox"><div class="checkmark">✓</div></div><div class="itxt">Celebrity Cruises — final onboard invoice<div class="imeta">Expense it</div></div><span class="bdg b-blue">file</span></div>
+    <div class="item" data-id="i8" data-label="Tax invoices note to self Jun 28"><div class="checkbox"><div class="checkmark">✓</div></div><div class="itxt">Tax invoices — you emailed yourself a note Jun 28<div class="imeta">What were you tracking here?</div></div><span class="bdg b-blue">check</span></div>
+  </div>
+
+  <div class="sec">
+    <div class="sec-label">📬 reply needed</div>
+    <div class="item" data-id="r1" data-label="SO Paris August 24 night Cecilia August28studio"><div class="checkbox"><div class="checkmark">✓</div></div><div class="itxt">Mondrian Bordeaux / SO Paris — Cecilia (August 28 Studio) offered Aug 24 hotel night<div class="imeta">She replied Jul 1, waiting on you to confirm</div></div><span class="bdg b-orange">reply</span></div>
+    <div class="item" data-id="r2" data-label="Traditional vessels maritime pitch Nestor Xhibition"><div class="checkbox"><div class="checkmark">✓</div></div><div class="itxt">Maritime vessels travel pitch — Nestor at Xhibition (Jul 1)<div class="imeta">Luxury traditional vessel experiences — worth a look for FDL</div></div><span class="bdg b-orange">review</span></div>
+    <div class="item" data-id="r3" data-label="Fricy fruit spicy flavor trend Kickstand Cocktails Jake"><div class="checkbox"><div class="checkmark">✓</div></div><div class="itxt">"Fricy" flavor trend pitch — Jake at Kickstand Cocktails<div class="imeta">Fruit + spicy, summer trend — FDL angle?</div></div><span class="bdg b-orange">review</span></div>
+    <div class="item" data-id="r4" data-label="Marriott Bookcation reading retreats Sophia OMC"><div class="checkbox"><div class="checkmark">✓</div></div><div class="itxt">Marriott Bonvoy reading retreats / Bookcation pitch — Sophia at OMC<div class="imeta">Followed up Jun 29 — FDL travel feature?</div></div><span class="bdg b-orange">review</span></div>
+    <div class="item" data-id="r5" data-label="SHA longevity wellness Blue Zones AP feature Charlene"><div class="checkbox"><div class="checkmark">✓</div></div><div class="itxt">SHA Wellness / Blue Zones AP feature — Charlene at Stanton<div class="imeta">You're writing a Blue Zones AP piece, SHA keeps coming up — get their input</div></div><span class="bdg b-orange">action</span></div>
+    <div class="item" data-id="r6" data-label="Riviera Travel Allie Hemsworth media kit send"><div class="checkbox"><div class="checkmark">✓</div></div><div class="itxt">Riviera Travel (Allie, Hemsworth) — send media kit + audience info<div class="imeta">Replied Jun 11, still waiting on you</div></div><span class="bdg b-orange">reply</span></div>
+    <div class="item" data-id="r7" data-label="Challenge Butter grilling survey Laura Baddish article"><div class="checkbox"><div class="checkmark">✓</div></div><div class="itxt">Challenge Butter grilling survey — Laura Baddish, Matt confirmed<div class="imeta">Quiz link lives till fall — write the article</div></div><span class="bdg b-orange">write</span></div>
+    <div class="item" data-id="r8" data-label="Jill Browning Eat Like a Sardinian cookbook arrived check"><div class="checkbox"><div class="checkmark">✓</div></div><div class="itxt">Eat Like a Sardinian cookbook — Jill Browning checked Jun 15 if it arrived<div class="imeta">Has it arrived? Reply to Jill either way</div></div><span class="bdg b-orange">reply</span></div>
+    <div class="item" data-id="r9" data-label="Yahoo Partner Portal activate account"><div class="checkbox"><div class="checkmark">✓</div></div><div class="itxt">Yahoo Partner Portal — activation invite Jun 16<div class="imeta">Set your password and activate</div></div><span class="bdg b-orange">action</span></div>
+    <div class="item" data-id="r10" data-label="Janna weekly progress report Jun 24"><div class="checkbox"><div class="checkmark">✓</div></div><div class="itxt">Janna — weekly progress report Jun 24<div class="imeta">AP publish date audit, July production starting</div></div><span class="bdg b-blue">read</span></div>
+    <div class="item" data-id="r11" data-label="Arv content team report Jun 24"><div class="checkbox"><div class="checkmark">✓</div></div><div class="itxt">Arv — content team report Jun 24<div class="imeta">All June AP done, July in production</div></div><span class="bdg b-blue">read</span></div>
+    <div class="item" data-id="r12" data-label="Revised Shareholders Agreement Sutherland Mark sign"><div class="checkbox"><div class="checkmark">✓</div></div><div class="itxt">Revised Shareholders Agreement — Kelly Griffin/Sutherland Mark, Jun 19<div class="imeta">Fair market value simplified — review and sign</div></div><span class="bdg b-red">sign</span></div>
+    <div class="item" data-id="r13" data-label="Charlotte Panko Peruvian article write Kristen Moore"><div class="checkbox"><div class="checkmark">✓</div></div><div class="itxt">Charlotte / Panko Peruvian — write the article<div class="imeta">Photos + resources from Kristen Moore all in</div></div><span class="bdg b-blue">write</span></div>
+    <div class="item" data-id="r14" data-label="Celebrity Solstice write cruise article Golin images"><div class="checkbox"><div class="checkmark">✓</div></div><div class="itxt">Celebrity Solstice — write the cruise article<div class="imeta">Images from Golin ready</div></div><span class="bdg b-blue">write</span></div>
+    <div class="item" data-id="r15" data-label="Iceland Viking Wellness roundup write Grace Seymour"><div class="checkbox"><div class="checkmark">✓</div></div><div class="itxt">Iceland / Viking Wellness roundup<div class="imeta">Confirmed with Grace Seymour Jun 10</div></div><span class="bdg b-blue">write</span></div>
+    <div class="item" data-id="r16" data-label="Mediavine Google new search feature publishers read"><div class="checkbox"><div class="checkmark">✓</div></div><div class="itxt">Mediavine — Google's new search feature impact on publishers<div class="imeta">Jun 23 newsletter — worth reading</div></div><span class="bdg b-blue">read</span></div>
+    <div class="item" data-id="r17" data-label="NewsBreak May revenue report read file"><div class="checkbox"><div class="checkmark">✓</div></div><div class="itxt">NewsBreak — May 2026 revenue report<div class="imeta">Review and file</div></div><span class="bdg b-blue">read</span></div>
+    <div class="item" data-id="r18" data-label="GrillWhatYouLove comment moderate Ninja Woodfire Chicken"><div class="checkbox"><div class="checkmark">✓</div></div><div class="itxt">GrillWhatYouLove — comment awaiting moderation (Ninja Woodfire Chicken)</div><span class="bdg b-blue">moderate</span></div>
+  </div>
+
+  <div class="sec">
+    <div class="sec-label">✈️ travel & upcoming</div>
+    <div class="item" data-id="t1" data-label="Door County United Airlines BF62FH Jul 28-31 confirm flight"><div class="checkbox"><div class="checkmark">✓</div></div><div class="itxt">Door County trip — United Airlines booked BF62FH, Jul 28–31<div class="imeta">Geiger PR (Jules) confirmed Jun 30 — you replied "got it"</div></div><span class="bdg b-blue">confirmed</span></div>
+    <div class="item" data-id="t2" data-label="Paris August 23 Air Canada CV63SI CR3XBP"><div class="checkbox"><div class="checkmark">✓</div></div><div class="itxt">Paris — Aug 23, Air Canada (CR3XBP + CV63SI)<div class="imeta">Aug 24 night at SO Paris potentially arranged by Cecilia — confirm</div></div><span class="bdg b-orange">confirm hotel</span></div>
+    <div class="item" data-id="t3" data-label="UCB Cares patient support program"><div class="checkbox"><div class="checkmark">✓</div></div><div class="itxt">UCB Cares — patient support program welcome email Jun 24<div class="imeta">File / follow instructions</div></div><span class="bdg b-blue">action</span></div>
+    <div class="item" data-id="t4" data-label="Allianz travel insurance B2CCAA500028627 file"><div class="checkbox"><div class="checkmark">✓</div></div><div class="itxt">Allianz travel insurance — policy B2CCAA500028627<div class="imeta">File somewhere safe</div></div><span class="bdg b-blue">file</span></div>
+  </div>
+
+</div>
+
+<script>
+const WORKER_URL = 'https://jenn-dashboard.writerjenn1.workers.dev';
+const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwbapDrAEKf1V5k6_M2MPXxfquzxffW2hEa7FUieLJlXSDvtskpEpYTRL3E_aLz2oQ/exec';
+let doneSet = new Set();
+
+const days = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+const months = ['January','February','March','April','May','June','July','August','September','October','November','December'];
+const n = new Date();
+document.getElementById('datestr').textContent = days[n.getDay()] + ' · ' + months[n.getMonth()] + ' ' + n.getDate() + ', ' + n.getFullYear();
+function updateClock() { document.getElementById('clock').textContent = new Date().toLocaleTimeString('en-CA',{hour:'numeric',minute:'2-digit'}); }
+updateClock(); setInterval(updateClock, 30000);
+
+function updateStats() {
+  const total = document.querySelectorAll('.item[data-id]').length;
+  const done = doneSet.size;
+  document.getElementById('dn').textContent = done;
+  document.getElementById('rn').textContent = total - done;
+  document.getElementById('pf').style.width = total ? Math.round(done/total*100)+'%' : '0%';
+}
+function setSyncStatus(msg) { document.getElementById('sync-status').textContent = msg; }
+function applyDone() {
+  document.querySelectorAll('.item[data-id]').forEach(el => el.classList.toggle('done', doneSet.has(el.dataset.id)));
+  updateStats();
+}
+function bindItem(el) {
+  el.addEventListener('click', () => {
+    const id = el.dataset.id, label = el.dataset.label || id;
+    const nowDone = !doneSet.has(id);
+    if (nowDone) doneSet.add(id); else doneSet.delete(id);
+    el.classList.toggle('done', nowDone);
+    updateStats();
+    setSyncStatus('saving...');
+    callScript({ action: nowDone ? 'tick' : 'untick', id, label }).then(res => {
+      setSyncStatus(res ? 'synced ' + new Date().toLocaleTimeString('en-CA',{hour:'numeric',minute:'2-digit'}) : 'offline');
+    });
+  });
+}
+document.querySelectorAll('.item[data-id]').forEach(el => bindItem(el));
+
+async function callScript(params) {
+  try {
+    const res = await fetch(SCRIPT_URL + '?' + new URLSearchParams(params).toString());
+    return await res.json();
+  } catch(e) { return null; }
+}
+async function loadDoneFromSheet() {
+  const data = await callScript({ action: 'read' });
+  if (data && data.done) data.done.forEach(id => doneSet.add(id));
+}
+async function loadJamiTasks() {
+  try {
+    const res = await fetch(WORKER_URL + '/?action=jami');
+    const data = await res.json();
+    const container = document.getElementById('jami-items');
+    container.innerHTML = '';
+    const tasks = (data.tasks || []).filter(t => !t.name.toLowerCase().includes('placeholder'));
+    if (!tasks.length) { container.innerHTML = '<div class="loading">No tasks in review queue</div>'; return; }
+    document.getElementById('jami-status').textContent = tasks.length + ' items';
+    tasks.forEach(t => {
+      const id = 'jami-' + t.id;
+      const div = document.createElement('div');
+      div.className = 'item'; div.dataset.id = id; div.dataset.label = 'WP: ' + t.name;
+      if (doneSet.has(id)) div.classList.add('done');
+      const due = t.due_date ? '<span class="bdg b-blue">' + new Date(parseInt(t.due_date)).toLocaleDateString('en-CA',{month:'short',day:'numeric'}) + '</span>' : '';
+      div.innerHTML = '<div class="checkbox"><div class="checkmark">✓</div></div><div class="itxt">' + t.name + '</div>' + due;
+      bindItem(div); container.appendChild(div);
+    });
+    updateStats();
+  } catch(e) { document.getElementById('jami-items').innerHTML = '<div class="loading">Failed to load</div>'; }
+}
+async function loadFdlTasks() {
+  try {
+    const res = await fetch(WORKER_URL + '/?action=fdl');
+    const data = await res.json();
+    const container = document.getElementById('fdl-items');
+    container.innerHTML = '';
+    if (!data.tasks || !data.tasks.length) {
+      container.innerHTML = '<div class="loading" style="color:var(--text2)">No tasks in review gdoc</div>';
+      document.getElementById('fdl-status').textContent = 'up to date';
+      return;
+    }
+    data.tasks.forEach(t => {
+      const id = 'fdl-' + t.id;
+      const div = document.createElement('div');
+      div.className = 'item'; div.dataset.id = id; div.dataset.label = 'FDL Review: ' + t.name;
+      if (doneSet.has(id)) div.classList.add('done');
+      div.innerHTML = '<div class="checkbox"><div class="checkmark">✓</div></div><div class="itxt">' + t.name + '</div><span class="bdg b-orange">review</span>';
+      bindItem(div); container.appendChild(div);
+    });
+    document.getElementById('fdl-status').textContent = 'refreshed ' + new Date().toLocaleTimeString('en-CA',{hour:'numeric',minute:'2-digit'});
+    updateStats();
+  } catch(e) { document.getElementById('fdl-status').textContent = 'refresh failed'; }
+}
+function scheduleFdlRefresh() {
+  const now = new Date(), h = now.getHours();
+  const next = [8,12,16].find(t => t > h);
+  if (next) {
+    const d = new Date(now); d.setHours(next,0,0,0);
+    const label = next===12?'12pm':next<12?next+'am':(next-12)+'pm';
+    document.getElementById('fdl-status').textContent = 'next refresh at ' + label;
+    setTimeout(() => { loadFdlTasks(); scheduleFdlRefresh(); }, d-now);
+  } else { document.getElementById('fdl-status').textContent = 'done for today'; }
+}
+async function init() {
+  setSyncStatus('loading...');
+  await loadDoneFromSheet();
+  applyDone();
+  await Promise.all([loadJamiTasks(), loadFdlTasks()]);
+  applyDone();
+  setSyncStatus('synced ' + new Date().toLocaleTimeString('en-CA',{hour:'numeric',minute:'2-digit'}));
+  scheduleFdlRefresh();
+}
+init();
+</script>
+</body>
+</html>
